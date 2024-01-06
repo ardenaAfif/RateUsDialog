@@ -12,7 +12,7 @@ import com.opensource.rateus.databinding.RateUsDialogBinding
 class RateUsDialog(context: Context) : AppCompatDialog(context) {
 
     // Declare variables
-    private lateinit var binding: RateUsDialogBinding
+    private var binding: RateUsDialogBinding
 
     init {
         // Initialize views using ViewBinding
@@ -27,10 +27,10 @@ class RateUsDialog(context: Context) : AppCompatDialog(context) {
             btnSubmit.setOnClickListener {
                 showFeedbackToast()
             }
-        }
 
-        // Play animation
-        playAnim(binding.ivEmoRating)
+            // Play animation
+            playAnim(ivEmoRating)
+        }
     }
 
     private fun showFeedbackToast() {
